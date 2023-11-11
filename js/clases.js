@@ -18,7 +18,7 @@ class Sistema{
         }
         return hay;
     }
-
+//algo
     agregarExperiencia(experiencia){
         this.listaExperiencia.push(experiencia);
     }
