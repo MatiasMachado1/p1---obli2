@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Regalos Especiales</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/estilos.css">
+	</head>
+	<body>
+		<header>
+			<h1>Regalos especiales</h1>
+			<h2>Sitio desarrollado por: 
+				<a href="https://www.ort.edu.uy" target="_blank">Mat&iacute;as Machado &#40;305989&#41;</a> y 
+				<a href="https://www.ort.edu.uy" target="_blank">Santiago Goldschmidt &#40;323693&#41;</a>
+			</h2>
+			
+			<nav>
+				<a href="#linkExp">Gesti&oacute;n de experiencias</a>
+				<a href="#linkCat">Gesti&oacute;n de categor&iacute;as</a>
+				<a href="#linkInfo">Informes</a>
+			</nav>
+		</header>
+		<article class="izquierda">
+			<h2>Categor&iacute;a</h2>
+			<select id="idComboCategoriasIzquierda">
+			</select>
+			<h2>Cantidad de personas</h2>
+			<select id="idCantidadPersonasCategoria">
+				<option value="todos">Todos</option>
+				<option value="uno">1 persona</option>
+				<option value="dos">2 personas</option>
+				<option value="varias">Más de 2 personas</option>
+			</select>
+			<h2>Orden de precio</h2>
+			<select id="idOrdenPrecio">
+				<option value="1">Creciente</option>
+				<option value="2">Decreciente</option>
+			</select>
+			<br><br>
+		</article>
+		<article class="derecha">
+			<h2>Experiencias</h2>
+			<table id="idTabla">
+				<caption> </caption>
+				
+			</table>
+		</article>
+		<article class="derecha">
+			<h2>&#161;Comprar&#33;</h2>
+			<form id="idFormCompra">
+				<p>Experiencia&#58; <span id="idCualExperiencia"></span></p>
+				<label for="idNombreComprador">Nombre Comprador&#58;</label>
+				<input type="text" id="idNombreComprador"  required>
+				<label for="idMail">Mail&#58;</label>
+				<input type="email" id="idMail"  required>
+				<input type="button" id="idBotonComprar" disabled value="Comprar">
+				<br>
+				<br>
+			</form>
+		</article>	
+		<article id="linkInfo" class="abajo banda0">
+			<h2>Informes</h2>
+			<p>Monto de la experiencia&#47;s m&aacute;s cara&#47;s</p>
+			<p id="idExperienciaMasCara">Sin datos</p>
+			
+			<p id="idExperienciaMasVecesTexto">Experiencia&#47;s m&aacute;s veces comprada</p>
+			<ul id="idExperienciasMasCompradas">
+				<li>Sin datos</li>
+			</ul>
+			
+			<details>
+				<summary id="idSummary">Detalle de compras de la categor&iacute;a seleccionada</summary>
+				
+				<p id="idParrafoCompras" >Compras realizadas</p>
+				<p id="idDetallesCualCategoria"></p>
+				<ul id="idListaCompras">
+					<li>Sin datos</li>
+				</ul>
+			</details>	
+			
+		</article>
+		<article id="linkCat" class="abajo banda1" >
+			<h2>Gesti&oacute;n de categor&iacute;as</h2>
+			<form id="idFormCategoria">
+				<label for="idNombreCategoria">Nombre de la categor&iacute;a&#58;</label>
+				<input type="text" id="idNombreCategoria" required >
+				
+				<label for="idDetallesCategoria">Detalles de la categor&iacute;a&#58;</label>
+				<input id="idDetallesCategoria" required >
+				
+				<input type="button" id="idBotonAgregarCategoria" value="Agregar">
+			</form>
+			<br>
+			<label for="idComboCategoriasAbajo" >Seleccionar categor&iacute;a a borrar&#58;</label>
+			<select id="idComboCategoriasAbajo"  >
+			</select>
+			<input id="idBotonBajaCategoria" type="button" value="Eliminar" disabled>
+		</article>
+		<article id="linkExp" class="abajo banda2">
+			<h2>Gesti&oacute;n de experiencias</h2>
+			<form id="idFormExperiencia">
+				<label for="idTituloExperiencia">T&iacute;tulo de la experiencia&#58;</label>
+				<input type="text" id="idTituloExperiencia" required >
+				
+				<label for="idDescripcionExperiencia">Descripci&oacute;n&#58;</label>
+				<input id="idDescripcionExperiencia" required >
+				
+				<label for="idPrecioExperiencia">Precio&#58;</label>
+				<input type="number" id="idPrecioExperiencia" required min="0" >
+				<label>Cantidad&#58; </label>
+				<select id="idCantidadPersonasExperiencia">
+					
+					<option value="uno" selected >1 persona</option>
+					<option value="dos">2 personas</option>
+					<option value="varias">M&aacute;s de 2 personas</option>
+				</select>
+				<label for="idCategoriaExperiencia">Categor&iacute;a&#58;</label>
+				<select id="idCategoriaExperiencia" name="categoria">
+				</select>
+				<input type="button" id="idBotonAltaExperiencia" disabled value="Agregar">
+			</form>
+			<br>
+			<label for="idComboBajaExperiencia" >Seleccionar experiencia a borrar&#58;</label>
+			<select id="idComboBajaExperiencia" name="combo" >
+			</select>
+			<input id="idBotonBajaExperiencia" type="button" disabled value="Eliminar">
+		</article>
+		
+		
+		<footer>
+			<p>Sitio desarrollado por Matias Machado &#40;305989&#41; y Santiago Goldschmidt &#40;323693&#41; &#8211; Universidad ORT Uruguay</p>
+		</footer>
+		
+		<script src="js/clases.js"></script>
+		<script src="js/funciones.js"></script>
+		
+	</body>
+	<!--Matias Machado (305989) y Santiago Goldschmidt (323693)-->
+	</html>
+		
